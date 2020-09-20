@@ -17,10 +17,9 @@ class Welcome extends CI_Controller {
 		$param['userEmail']  		=		"info@vbloggers.in";
 		$data = $this->common_model->addData('inter_users',$param);
 		if($data):
-			echo "Data inserted";die;
+			$this->load->view('welcome_message');
 		else:
 			echo "Something went wrong";die;
 		endif;
-		$this->load->view('welcome_message');
 	}
 }
